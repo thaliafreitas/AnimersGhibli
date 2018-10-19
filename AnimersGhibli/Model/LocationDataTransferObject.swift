@@ -1,5 +1,5 @@
 //
-//  Vehicles.swift
+//  Locations.swift
 //  AnimersGhibli
 //
 //  Created by Thalia Freitas on 18/10/18.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-struct Vehicle: Codable {
-    var vehicle: String
+struct LocationDataTransferObject: Codable {
+
+    var location: [String]
     
     enum CodingKeys: String, CodingKey {
-        
-        case vehicle = "vehicles"
+        case location = "locations"
     }
-
 }

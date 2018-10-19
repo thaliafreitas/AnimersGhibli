@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct Specie: Codable {
+struct SpecieData TransferObject: Codable {
 
-    var species: String
+    var species: [String]
     
     enum CodingKeys: String, CodingKey {
         case species = "species"
