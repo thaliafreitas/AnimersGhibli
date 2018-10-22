@@ -9,11 +9,18 @@
 import UIKit
 
 struct VehicleDataTransferObject: Codable {
-    var vehicle: [String]
+    let description: String
+    let films: [String]
+    let id: String
+    let length: String
+    let name: String
     
     enum CodingKeys: String, CodingKey {
-        
-        case vehicle = "vehicles"
+        case description = "description"
+        case films = "films"
+        case id = "id"
+        case length = "length"
+        case name = "name"
     }
 
 }

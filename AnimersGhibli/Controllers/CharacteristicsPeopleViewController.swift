@@ -8,11 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CharacteristicsPeopleViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var eye: UILabel!
+    @IBOutlet weak var hair: UILabel!
+    @IBOutlet weak var film: UILabel!
+//    @IBOutlet weak var specie: UILabel!
+    
+    var nameCharacter: String?
+    var ageCharacter: String?
+    var genderCharacter: String?
+    var eyeCharacter: String?
+    var hairCharacter: String?
+    var filmCharacter: String?
+//    var specieCharacter: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        name.text = nameCharacter!
+        age.text = ageCharacter!
+        gender.text = genderCharacter!
+        eye.text = eyeCharacter!
+        hair.text = hairCharacter!
+        film.text = filmCharacter!
+//        specie.text = specieCharacter!
     }
 
 

@@ -10,9 +10,20 @@ import UIKit
 
 struct LocationDataTransferObject: Codable {
 
-    var location: [String]
+    let climate: String
+    let films: [String]
+    let name: String
+    let residents: [String]
+    let surfaceWater: String
+    let terrain: String
+
     
     enum CodingKeys: String, CodingKey {
-        case location = "locations"
+        case climate = "climate"
+        case films = "films"
+        case name = "name"
+        case residents = "residents"
+        case surfaceWater = "surface_water"
+        case terrain = "terrain"
     }
 }

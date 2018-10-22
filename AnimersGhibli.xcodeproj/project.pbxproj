@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		576558E8217616A20021D545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576558E7217616A20021D545 /* AppDelegate.swift */; };
-		576558EA217616A20021D545 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576558E9217616A20021D545 /* ViewController.swift */; };
+		576558EA217616A20021D545 /* CharacteristicsPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576558E9217616A20021D545 /* CharacteristicsPeopleViewController.swift */; };
 		576558ED217616A20021D545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576558EB217616A20021D545 /* Main.storyboard */; };
 		576558F0217616A20021D545 /* AnimersGhibli.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 576558EE217616A20021D545 /* AnimersGhibli.xcdatamodeld */; };
 		576558F2217616A30021D545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576558F1217616A30021D545 /* Assets.xcassets */; };
 		576558F5217616A30021D545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576558F3217616A30021D545 /* LaunchScreen.storyboard */; };
+		576558FD21761D6F0021D545 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576558FC21761D6F0021D545 /* APIManager.swift */; };
+		576558FF21762A470021D545 /* DataFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576558FE21762A470021D545 /* DataFileManager.swift */; };
+		57655901217757440021D545 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655900217757440021D545 /* HomeViewController.swift */; };
+		57655903217758130021D545 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655902217758130021D545 /* SearchViewController.swift */; };
+		57655905217758340021D545 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655904217758340021D545 /* QuizViewController.swift */; };
+		5765590821775B270021D545 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765590721775B270021D545 /* CustomCollectionViewCell.swift */; };
+		5765590A21776C6C0021D545 /* MovieDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765590921776C6C0021D545 /* MovieDataTransferObject.swift */; };
+		5765590D21776EBC0021D545 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765590C21776EBC0021D545 /* DataStore.swift */; };
+		5765590F2178AB000021D545 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765590E2178AB000021D545 /* DetailsViewController.swift */; };
+		57655913217918050021D545 /* SpecieData TransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655912217918050021D545 /* SpecieData TransferObject.swift */; };
+		57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655914217918500021D545 /* LocationDataTransferObject.swift */; };
+		57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655916217918860021D545 /* VehicleDataTransferObject.swift */; };
+		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		576558E4217616A20021D545 /* AnimersGhibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimersGhibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576558E7217616A20021D545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		576558E9217616A20021D545 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		576558E9217616A20021D545 /* CharacteristicsPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsPeopleViewController.swift; sourceTree = "<group>"; };
 		576558EC217616A20021D545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		576558EF217616A20021D545 /* AnimersGhibli.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimersGhibli.xcdatamodel; sourceTree = "<group>"; };
 		576558F1217616A30021D545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576558F4217616A30021D545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576558F6217616A30021D545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576558FC21761D6F0021D545 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		576558FE21762A470021D545 /* DataFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFileManager.swift; sourceTree = "<group>"; };
+		57655900217757440021D545 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		57655902217758130021D545 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		57655904217758340021D545 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		5765590721775B270021D545 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		5765590921776C6C0021D545 /* MovieDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObject.swift; sourceTree = "<group>"; };
+		5765590C21776EBC0021D545 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		5765590E2178AB000021D545 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		57655912217918050021D545 /* SpecieData TransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecieData TransferObject.swift"; sourceTree = "<group>"; };
+		57655914217918500021D545 /* LocationDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataTransferObject.swift; sourceTree = "<group>"; };
+		57655916217918860021D545 /* VehicleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataTransferObject.swift; sourceTree = "<group>"; };
+		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +83,43 @@
 			isa = PBXGroup;
 			children = (
 				576558E7217616A20021D545 /* AppDelegate.swift */,
-				576558E9217616A20021D545 /* ViewController.swift */,
+				576558FC21761D6F0021D545 /* APIManager.swift */,
 				576558EB217616A20021D545 /* Main.storyboard */,
+				576558FE21762A470021D545 /* DataFileManager.swift */,
+				5765590B21776CA40021D545 /* Model */,
+				57655906217758640021D545 /* Controllers */,
 				576558F1217616A30021D545 /* Assets.xcassets */,
 				576558F3217616A30021D545 /* LaunchScreen.storyboard */,
 				576558F6217616A30021D545 /* Info.plist */,
 				576558EE217616A20021D545 /* AnimersGhibli.xcdatamodeld */,
 			);
 			path = AnimersGhibli;
+			sourceTree = "<group>";
+		};
+		57655906217758640021D545 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57655900217757440021D545 /* HomeViewController.swift */,
+				57655902217758130021D545 /* SearchViewController.swift */,
+				5765590721775B270021D545 /* CustomCollectionViewCell.swift */,
+				576558E9217616A20021D545 /* CharacteristicsPeopleViewController.swift */,
+				5765590E2178AB000021D545 /* DetailsViewController.swift */,
+				57655904217758340021D545 /* QuizViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5765590B21776CA40021D545 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5765590C21776EBC0021D545 /* DataStore.swift */,
+				57655912217918050021D545 /* SpecieData TransferObject.swift */,
+				57655916217918860021D545 /* VehicleDataTransferObject.swift */,
+				57655914217918500021D545 /* LocationDataTransferObject.swift */,
+				5765590921776C6C0021D545 /* MovieDataTransferObject.swift */,
+				5765591E21792F750021D545 /* PeopleDataTransferObject.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +193,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576558EA217616A20021D545 /* ViewController.swift in Sources */,
+				576558FD21761D6F0021D545 /* APIManager.swift in Sources */,
+				57655903217758130021D545 /* SearchViewController.swift in Sources */,
+				57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */,
+				5765590821775B270021D545 /* CustomCollectionViewCell.swift in Sources */,
+				576558FF21762A470021D545 /* DataFileManager.swift in Sources */,
+				5765590D21776EBC0021D545 /* DataStore.swift in Sources */,
+				5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */,
+				57655905217758340021D545 /* QuizViewController.swift in Sources */,
+				576558EA217616A20021D545 /* CharacteristicsPeopleViewController.swift in Sources */,
+				57655913217918050021D545 /* SpecieData TransferObject.swift in Sources */,
 				576558E8217616A20021D545 /* AppDelegate.swift in Sources */,
 				576558F0217616A20021D545 /* AnimersGhibli.xcdatamodeld in Sources */,
+				57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */,
+				5765590A21776C6C0021D545 /* MovieDataTransferObject.swift in Sources */,
+				57655901217757440021D545 /* HomeViewController.swift in Sources */,
+				5765590F2178AB000021D545 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

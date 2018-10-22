@@ -15,10 +15,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     
-    func viewCollection(image: UIImage, title: String) {
+    func viewCollection(image: UIImage?, title: String) {
         movieImage.image = image
         titleLabel.text = title
-        
     }
     
 }

@@ -8,11 +8,21 @@
 
 import UIKit
 
-struct SpecieData TransferObject: Codable {
+struct SpecieDataTransferObject: Codable {
 
-    var species: [String]
+    var name: String
+    var classification: String
+    var eyes: String
+    var hairs: String
+    var people: [String]
+    var films: [String]
     
     enum CodingKeys: String, CodingKey {
-        case species = "species"
+        case name = "name"
+        case classification = "classification"
+        case eyes = "eye_colors"
+        case hairs = "hair_colors"
+        case films = "films"
+        case people = "people"
     }
 }

@@ -8,6 +8,26 @@
 
 import UIKit
 
-class PeopleDataTransferObject: NSObject {
+struct PeopleDataTransferObject: Codable {
+    var name: String
+    var gender: String
+    var age: String
+    var eye: String
+    var hairColor: String
+    var films: [String]
+//    var species: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case gender = "gender"
+        case age = "age"
+        case eye = "eye_color"
+        case hairColor = "hair_color"
+        case films = "films"
+//        case species = "species"
+ 
+    }
+    
+    
 
 }
