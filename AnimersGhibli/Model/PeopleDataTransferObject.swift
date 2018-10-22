@@ -15,7 +15,7 @@ struct PeopleDataTransferObject: Codable {
     var eye: String
     var hairColor: String
     var films: [String]
-//    var species: [String]
+    var species: String
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -24,7 +24,7 @@ struct PeopleDataTransferObject: Codable {
         case eye = "eye_color"
         case hairColor = "hair_color"
         case films = "films"
-//        case species = "species"
+        case species = "species"
  
     }
     

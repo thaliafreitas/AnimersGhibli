@@ -15,8 +15,8 @@ class CharacteristicsPeopleViewController: UIViewController {
     @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var eye: UILabel!
     @IBOutlet weak var hair: UILabel!
-    @IBOutlet weak var film: UILabel!
-//    @IBOutlet weak var specie: UILabel!
+//    @IBOutlet weak var film: UILabel!
+    @IBOutlet weak var specie: UILabel!
     
     var nameCharacter: String?
     var ageCharacter: String?
@@ -24,7 +24,7 @@ class CharacteristicsPeopleViewController: UIViewController {
     var eyeCharacter: String?
     var hairCharacter: String?
     var filmCharacter: String?
-//    var specieCharacter: String?
+    var specieCharacter: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,9 @@ class CharacteristicsPeopleViewController: UIViewController {
         gender.text = genderCharacter!
         eye.text = eyeCharacter!
         hair.text = hairCharacter!
-        film.text = filmCharacter!
-//        specie.text = specieCharacter!
+//        film.text = filmCharacter
+        specie.text = specieCharacter
+       
     }
 
 

@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        DataStore().getFilms { (f) in
+        DataStore().saveFilms { (f) in
            self.store.filmesDTO = f
            self.collectionView.reloadData()
         }
@@ -64,10 +64,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             vc.movieTitlee = store.filmesDTO[currentRow].title
             vc.movieDescriptionn = store.filmesDTO[currentRow].movieDescription
             vc.imageDetails = UIImage(named: store.filmesDTO[currentRow].title)
-            
-           
-        
-            
             }
     }
 

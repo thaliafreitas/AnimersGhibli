@@ -26,6 +26,7 @@
 		57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655914217918500021D545 /* LocationDataTransferObject.swift */; };
 		57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655916217918860021D545 /* VehicleDataTransferObject.swift */; };
 		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
+		57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655920217E0A030021D545 /* LoadingScreenDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		57655914217918500021D545 /* LocationDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataTransferObject.swift; sourceTree = "<group>"; };
 		57655916217918860021D545 /* VehicleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataTransferObject.swift; sourceTree = "<group>"; };
 		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
+		57655920217E0A030021D545 /* LoadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +84,9 @@
 		576558E6217616A20021D545 /* AnimersGhibli */ = {
 			isa = PBXGroup;
 			children = (
-				576558E7217616A20021D545 /* AppDelegate.swift */,
 				576558FC21761D6F0021D545 /* APIManager.swift */,
 				576558EB217616A20021D545 /* Main.storyboard */,
+				57655922217E0A0A0021D545 /* Delegate */,
 				576558FE21762A470021D545 /* DataFileManager.swift */,
 				5765590B21776CA40021D545 /* Model */,
 				57655906217758640021D545 /* Controllers */,
@@ -120,6 +122,15 @@
 				5765591E21792F750021D545 /* PeopleDataTransferObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		57655922217E0A0A0021D545 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				57655920217E0A030021D545 /* LoadingScreenDelegate.swift */,
+				576558E7217616A20021D545 /* AppDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				57655905217758340021D545 /* QuizViewController.swift in Sources */,
 				576558EA217616A20021D545 /* CharacteristicsPeopleViewController.swift in Sources */,
 				57655913217918050021D545 /* SpecieData TransferObject.swift in Sources */,
+				57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */,
 				576558E8217616A20021D545 /* AppDelegate.swift in Sources */,
 				576558F0217616A20021D545 /* AnimersGhibli.xcdatamodeld in Sources */,
 				57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */,

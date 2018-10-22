@@ -20,18 +20,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        DataStore().getPeople { (p) in
+        DataStore().savePeople { (p) in
             self.store.peopleDTO = p
             self.tableView.reloadData()
             }
-//
-//        DataStore().getSpecie { (s) in
-//            self.store.specieDTO = s!
-//            self.tableView.reloadData()
-//        }
-
+        DataStore().saveSpecie { (s) in
+            self.store.specieDTO = s!
+            self.tableView.reloadData()
+        }
         
     }
+    
+
+    
     
 
 
@@ -42,7 +43,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = store.peopleDTO[indexPath.row].name
-        print(store.peopleDTO[indexPath.row].name)
+
         return cell
     }
     
@@ -59,13 +60,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             vc.eyeCharacter = store.peopleDTO[currentRow].eye
             vc.genderCharacter = store.peopleDTO[currentRow].gender
             vc.hairCharacter = store.peopleDTO[currentRow].hairColor
-//            vc.specieCharacter = store.specieDTO[currentRow].classification
-            
+            vc.specieCharacter = store.peopleDTO[currentRow].species
         }
+
     }
+    
+ 
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Characters"
     }
     
 }
+
+

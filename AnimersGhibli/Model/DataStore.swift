@@ -18,7 +18,7 @@ class DataStore {
     var vehicleDTO : [VehicleDataTransferObject] = []
     
     
-    func getFilms(completion: @escaping ([MovieDataTransferModel]) -> Void) {
+    func saveFilms(completion: @escaping ([MovieDataTransferModel]) -> Void) {
         
         APIManager.fetchAll { (filmes) in
             self.filmesDTO = filmes ?? []
@@ -26,7 +26,7 @@ class DataStore {
         }
     }
     
-    func getPeople(completion: @escaping ([PeopleDataTransferObject]) -> Void) {
+    func savePeople(completion: @escaping ([PeopleDataTransferObject]) -> Void) {
         APIManager.getPeople { (people) in
             self.peopleDTO = people ?? []
             completion(self.peopleDTO)
@@ -34,7 +34,7 @@ class DataStore {
        
     }
     
-    func getLocation(completion: @escaping ([LocationDataTransferObject]?) -> Void) {
+    func saveLocation(completion: @escaping ([LocationDataTransferObject]?) -> Void) {
         APIManager.getLocation { (location) in
             self.locationDTO = location ?? []
             completion(self.locationDTO)
@@ -42,19 +42,20 @@ class DataStore {
 
     }
     
-    func getSpecie(completion: @escaping ([SpecieDataTransferObject]?) -> Void) {
+    func saveSpecie(completion: @escaping ([SpecieDataTransferObject]?) -> Void) {
         APIManager.getSpecie { (specie) in
             self.specieDTO = specie ?? []
             completion(self.specieDTO)
         }
     }
     
-    func getVehicle(completion: @escaping ([VehicleDataTransferObject]?) -> Void) {
+    func saveVehicle(completion: @escaping ([VehicleDataTransferObject]?) -> Void) {
         APIManager.getVehicle { (vehicle) in
             self.vehicleDTO = vehicle ?? []
             completion(self.vehicleDTO)
         }
     }
+    
 
 
 }

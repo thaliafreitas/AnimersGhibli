@@ -17,7 +17,7 @@ struct MovieDataTransferModel: Codable {
     var people: [String]
     var location: [String]
     var vehicle: [String]
-    var specie: [String]
+    var species: [String]
     var director: String
     var producer: String
     var realeaseData: String
@@ -28,7 +28,7 @@ struct MovieDataTransferModel: Codable {
         case people = "people"
         case location = "locations"
         case vehicle = "vehicles"
-        case specie = "species"
+        case species = "species"
         case director = "director"
         case producer = "producer"
         case realeaseData = "release_date"

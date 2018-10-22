@@ -52,7 +52,7 @@ class APIManager {
                 let people = try decoder.decode([PeopleDataTransferObject].self, from: unwrappedDAta)
                 DispatchQueue.main.async {
                     completion(people)
-                    print(people)
+
 
                 }
             } catch {
@@ -89,7 +89,7 @@ class APIManager {
         dataTask.resume()
     }
     
-    static func getSpecie(completion: @escaping ([SpecieDataTransferObject]?) -> Void) {
+    static func getSpecie(completion: @escaping ([SpecieDataTransferObject]) -> Void) {
         
         let url = URL(string: "https://ghibliapi.herokuapp.com/species")
         
@@ -107,7 +107,6 @@ class APIManager {
                 DispatchQueue.main.async {
                     completion(species)
                 }
-//                print(species)
 
             } catch {
                 print("Could not get API data specie. \(error), \(error.localizedDescription)")
@@ -115,6 +114,7 @@ class APIManager {
         }
         dataTask.resume()
     }
+    
     
     static func getVehicle(completion: @escaping ([VehicleDataTransferObject]?) -> Void) {
         
