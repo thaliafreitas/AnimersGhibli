@@ -10,6 +10,7 @@ import UIKit
 
 class APIManager {
     
+    
     static func fetchAll(completion: @escaping ([MovieDataTransferModel]?) -> Void) {
         
         let url = URL(string: "https://ghibliapi.herokuapp.com/films")
@@ -52,9 +53,8 @@ class APIManager {
                 let people = try decoder.decode([PeopleDataTransferObject].self, from: unwrappedDAta)
                 DispatchQueue.main.async {
                     completion(people)
-
-
                 }
+                
             } catch {
                 print("Could not get API data people. \(error), \(error.localizedDescription)")
             }

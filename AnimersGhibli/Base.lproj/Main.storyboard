@@ -44,7 +44,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="meX-79-PhG" firstAttribute="top" secondItem="YfK-47-dSF" secondAttribute="top" id="1rv-xD-WMr"/>
+                            <constraint firstItem="meX-79-PhG" firstAttribute="top" secondItem="YfK-47-dSF" secondAttribute="top" id="9M3-aq-UDl"/>
                             <constraint firstItem="meX-79-PhG" firstAttribute="trailing" secondItem="YfK-47-dSF" secondAttribute="trailing" id="Hgj-WV-29m"/>
+                            <constraint firstItem="meX-79-PhG" firstAttribute="bottom" secondItem="YfK-47-dSF" secondAttribute="bottom" id="UYD-tb-xix"/>
+                            <constraint firstItem="meX-79-PhG" firstAttribute="leading" secondItem="YfK-47-dSF" secondAttribute="leading" id="bNT-zB-yea"/>
+                            <constraint firstItem="meX-79-PhG" firstAttribute="trailing" secondItem="YfK-47-dSF" secondAttribute="trailing" id="jEO-Dd-iZb"/>
                             <constraint firstItem="meX-79-PhG" firstAttribute="bottom" secondItem="YfK-47-dSF" secondAttribute="bottom" id="yPP-Xr-uQ8"/>
                             <constraint firstItem="meX-79-PhG" firstAttribute="leading" secondItem="YfK-47-dSF" secondAttribute="leading" id="zM9-qC-xp0"/>
                         </constraints>

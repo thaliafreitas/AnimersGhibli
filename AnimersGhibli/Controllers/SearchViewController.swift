@@ -32,10 +32,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    
-    
-
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return store.peopleDTO.count
     }
@@ -65,7 +61,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     }
     
- 
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Characters"
