@@ -27,6 +27,7 @@
 		57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655916217918860021D545 /* VehicleDataTransferObject.swift */; };
 		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
 		57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655920217E0A030021D545 /* LoadingScreenDelegate.swift */; };
+		577EAA35217F6A110041CF56 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA34217F6A110041CF56 /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		57655916217918860021D545 /* VehicleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataTransferObject.swift; sourceTree = "<group>"; };
 		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
 		57655920217E0A030021D545 /* LoadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenDelegate.swift; sourceTree = "<group>"; };
+		577EAA34217F6A110041CF56 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				57655902217758130021D545 /* SearchViewController.swift */,
 				5765590721775B270021D545 /* CustomCollectionViewCell.swift */,
 				576558E9217616A20021D545 /* CharacteristicsPeopleViewController.swift */,
+				577EAA34217F6A110041CF56 /* ScoreViewController.swift */,
 				5765590E2178AB000021D545 /* DetailsViewController.swift */,
 				57655904217758340021D545 /* QuizViewController.swift */,
 			);
@@ -221,6 +224,7 @@
 				5765590A21776C6C0021D545 /* MovieDataTransferObject.swift in Sources */,
 				57655901217757440021D545 /* HomeViewController.swift in Sources */,
 				5765590F2178AB000021D545 /* DetailsViewController.swift in Sources */,
+				577EAA35217F6A110041CF56 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
