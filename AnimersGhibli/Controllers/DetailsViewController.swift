@@ -14,7 +14,8 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var movieTitle: UILabel!
     
-    @IBOutlet weak var movieDescription: UILabel!
+    @IBOutlet weak var movieDescription: UITextView!
+    
     
 //    @IBOutlet weak var location: UILabel!
     
