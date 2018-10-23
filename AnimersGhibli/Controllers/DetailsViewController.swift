@@ -16,13 +16,13 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var movieDescription: UILabel!
     
-    @IBOutlet weak var location: UILabel!
+//    @IBOutlet weak var location: UILabel!
     
     
     var imageDetails: UIImage?
     var movieTitlee: String?
     var movieDescriptionn: String?
-    var movieLocation: String?
+//    var movieLocation: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController {
         imageDetail.image = imageDetails
         movieTitle.text = movieTitlee
         movieDescription.text = movieDescriptionn
-        location.text = movieLocation
+//        location.text = movieLocation
        
     
             
