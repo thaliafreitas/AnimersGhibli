@@ -28,6 +28,7 @@
 		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
 		57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655920217E0A030021D545 /* LoadingScreenDelegate.swift */; };
 		577EAA35217F6A110041CF56 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA34217F6A110041CF56 /* ScoreViewController.swift */; };
+		577EAA37217F6CA20041CF56 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA36217F6CA20041CF56 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
 		57655920217E0A030021D545 /* LoadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenDelegate.swift; sourceTree = "<group>"; };
 		577EAA34217F6A110041CF56 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		577EAA36217F6CA20041CF56 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5765590C21776EBC0021D545 /* DataStore.swift */,
+				577EAA36217F6CA20041CF56 /* CoreDataManager.swift */,
 				57655912217918050021D545 /* SpecieData TransferObject.swift */,
 				57655916217918860021D545 /* VehicleDataTransferObject.swift */,
 				57655914217918500021D545 /* LocationDataTransferObject.swift */,
@@ -210,6 +213,7 @@
 				576558FD21761D6F0021D545 /* APIManager.swift in Sources */,
 				57655903217758130021D545 /* SearchViewController.swift in Sources */,
 				57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */,
+				577EAA37217F6CA20041CF56 /* CoreDataManager.swift in Sources */,
 				5765590821775B270021D545 /* CustomCollectionViewCell.swift in Sources */,
 				576558FF21762A470021D545 /* DataFileManager.swift in Sources */,
 				5765590D21776EBC0021D545 /* DataStore.swift in Sources */,
