@@ -46,6 +46,7 @@ class CoreDataManager {
         
         do{
             let fetchedCharacters = try context.fetch(charactersFetch) as! [Character]
+            self.characters = fetchedCharacters
             
 //            self.characters = fetchedCharacters.sorted(by: { return $0.na < $1.id})
         }catch{
@@ -75,7 +76,8 @@ class CoreDataManager {
         let moviesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
         
         do{
-            let fetchedCharacters = try context.fetch(moviesFetch) as! [Movie]
+            let fetchedMovies = try context.fetch(moviesFetch) as! [Movie]
+            self.movies = fetchedMovies
             
             //            self.characters = fetchedCharacters.sorted(by: { return $0.na < $1.id})
         }catch{

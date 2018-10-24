@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
            self.store.filmesDTO = f
            self.collectionView.reloadData()
         }
+        
        
     }
     
@@ -41,7 +42,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
         let movie = store.filmesDTO[indexPath.row]
-
+        CoreDataManager.sharedInstance.saveMovies(withTitle: store.filmesDTO[indexPath.row].title, withMovieDescription: store.filmesDTO[indexPath.row].movieDescription, withProducer: store.filmesDTO[indexPath.row].producer, withReleaseData: store.filmesDTO[indexPath.row].realeaseData)
         
         cell.viewCollection(image: UIImage(named: movie.title), title: movie.title)
         
