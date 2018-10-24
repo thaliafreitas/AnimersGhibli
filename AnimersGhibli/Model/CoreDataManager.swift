@@ -47,8 +47,7 @@ class CoreDataManager {
         do{
             let fetchedCharacters = try context.fetch(charactersFetch) as! [Character]
             self.characters = fetchedCharacters
-            
-//            self.characters = fetchedCharacters.sorted(by: { return $0.na < $1.id})
+
         }catch{
             fatalError("Failed to fetch character: \(error)")
         }
@@ -57,17 +56,23 @@ class CoreDataManager {
     
     
     func saveMovies(withTitle title:String = "", withMovieDescription movieDescription:String  = "", withProducer producer: String = "", withReleaseData releaseData: String = "") {
-        let movie = Movie(context: context)
         
-        movie.producer = producer
-        movie.releaseData = releaseData
-        movie.title = title
-        movie.movieDescription = movieDescription
-    
-        do{
-            try context.save()
-        } catch{
-            fatalError("Failure to get context\(error)")
+        let fetchedMovies = fetchMovies()
+        
+        
+        if fetchedMovies.count < 20 {
+            let movie = Movie(context: context)
+            
+            movie.producer = producer
+            movie.releaseData = releaseData
+            movie.title = title
+            movie.movieDescription = movieDescription
+        
+            do{
+                try context.save()
+            } catch{
+                fatalError("Failure to get context\(error)")
+            }
         }
     }
     
@@ -75,18 +80,26 @@ class CoreDataManager {
    
         
 
-    func fetchMovies(){
+    func fetchMovies() -> [Movie]{
         
         let moviesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
         
         do{
             let fetchedMovies = try context.fetch(moviesFetch) as! [Movie]
-            self.movies = fetchedMovies
+            if fetchedMovies.count != 0 {
+                self.movies = fetchedMovies
+                self.movies = fetchedMovies.sorted {return $0.title! < $1.title!}
+            }
+            
+            return fetchedMovies
             
             //            self.characters = fetchedCharacters.sorted(by: { return $0.na < $1.id})
         }catch{
             fatalError("Failed to fetch character: \(error)")
         }
+        
+        
+        return [Movie]()
     }
     
     

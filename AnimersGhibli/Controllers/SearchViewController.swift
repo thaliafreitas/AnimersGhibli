@@ -28,8 +28,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             self.store.specieDTO = s!
             self.tableView.reloadData()
         }
-        CoreDataManager.sharedInstance.fetchMovies()
-        CoreDataManager.sharedInstance.fetchCharacters()
+        
+        
         
     }
     

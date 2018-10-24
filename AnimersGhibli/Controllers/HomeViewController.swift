@@ -22,8 +22,13 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         
         DataStore().saveFilms { (f) in
+        
            self.store.filmesDTO = f
            self.collectionView.reloadData()
+            
+            f.forEach({ (movie) in
+                CoreDataManager.sharedInstance.saveMovies(withTitle: movie.title, withMovieDescription: movie.movieDescription, withProducer: movie.producer, withReleaseData: movie.realeaseData)
+            })
         }
         
        
@@ -42,7 +47,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
         let movie = store.filmesDTO[indexPath.row]
-        CoreDataManager.sharedInstance.saveMovies(withTitle: store.filmesDTO[indexPath.row].title, withMovieDescription: store.filmesDTO[indexPath.row].movieDescription, withProducer: store.filmesDTO[indexPath.row].producer, withReleaseData: store.filmesDTO[indexPath.row].realeaseData)
+        
         
         cell.viewCollection(image: UIImage(named: movie.title), title: movie.title)
         
