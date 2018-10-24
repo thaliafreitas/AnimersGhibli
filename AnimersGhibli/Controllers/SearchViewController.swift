@@ -29,7 +29,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             self.tableView.reloadData()
         }
         CoreDataManager.sharedInstance.fetchMovies()
-        print(CoreDataManager.sharedInstance.movies)
+        CoreDataManager.sharedInstance.fetchCharacters()
         
     }
     

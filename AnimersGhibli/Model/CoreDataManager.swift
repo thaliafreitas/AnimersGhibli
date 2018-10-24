@@ -70,6 +70,10 @@ class CoreDataManager {
             fatalError("Failure to get context\(error)")
         }
     }
+    
+    
+   
+        
 
     func fetchMovies(){
         
@@ -80,6 +84,23 @@ class CoreDataManager {
             self.movies = fetchedMovies
             
             //            self.characters = fetchedCharacters.sorted(by: { return $0.na < $1.id})
+        }catch{
+            fatalError("Failed to fetch character: \(error)")
+        }
+    }
+    
+    
+    func resetCoreData() {
+        
+        let moviesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
+        
+        do{
+            let fetchedMovies = try context.fetch(moviesFetch) as! [Movie]
+            for movie in fetchedMovies{
+                context.delete(movie)
+            }
+            try context.save()
+            self.movies = []
         }catch{
             fatalError("Failed to fetch character: \(error)")
         }
