@@ -41,6 +41,4 @@ class DataFileManager: NSObject {
         return nil
     }
     
-
-
 }
