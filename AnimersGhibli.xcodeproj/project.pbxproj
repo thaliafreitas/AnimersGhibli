@@ -26,7 +26,6 @@
 		57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655914217918500021D545 /* LocationDataTransferObject.swift */; };
 		57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655916217918860021D545 /* VehicleDataTransferObject.swift */; };
 		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
-		57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655920217E0A030021D545 /* LoadingScreenDelegate.swift */; };
 		577EAA35217F6A110041CF56 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA34217F6A110041CF56 /* ScoreViewController.swift */; };
 		577EAA37217F6CA20041CF56 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA36217F6CA20041CF56 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +52,6 @@
 		57655914217918500021D545 /* LocationDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataTransferObject.swift; sourceTree = "<group>"; };
 		57655916217918860021D545 /* VehicleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataTransferObject.swift; sourceTree = "<group>"; };
 		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
-		57655920217E0A030021D545 /* LoadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenDelegate.swift; sourceTree = "<group>"; };
 		577EAA34217F6A110041CF56 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		577EAA36217F6CA20041CF56 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +131,6 @@
 		57655922217E0A0A0021D545 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				57655920217E0A030021D545 /* LoadingScreenDelegate.swift */,
 				576558E7217616A20021D545 /* AppDelegate.swift */,
 			);
 			path = Delegate;
@@ -221,7 +218,6 @@
 				57655905217758340021D545 /* QuizViewController.swift in Sources */,
 				576558EA217616A20021D545 /* CharacteristicsPeopleViewController.swift in Sources */,
 				57655913217918050021D545 /* SpecieData TransferObject.swift in Sources */,
-				57655921217E0A030021D545 /* LoadingScreenDelegate.swift in Sources */,
 				576558E8217616A20021D545 /* AppDelegate.swift in Sources */,
 				576558F0217616A20021D545 /* AnimersGhibli.xcdatamodeld in Sources */,
 				57655917217918860021D545 /* VehicleDataTransferObject.swift in Sources */,

@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
     }
     
     lazy var previewActions: [UIPreviewActionItem] = {
-        func previewActionForTitle(_ title: String, style: UIPreviewActionStyle = .default) -> UIPreviewAction {
+        func previewActionForTitle(_ title: String, style: UIPreviewAction.Style = .default) -> UIPreviewAction {
             return UIPreviewAction(title: title, style: style) { previewAction, viewController in
                 print("Action: \(title)")
             }

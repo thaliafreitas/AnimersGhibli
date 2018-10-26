@@ -76,41 +76,32 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQu-aX-3Bb">
-                                    <size key="itemSize" width="176" height="170"/>
+                                    <size key="itemSize" width="181" height="242"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="T9S-VK-eM7" customClass="CustomCollectionViewCell" customModule="AnimersGhibli" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="176" height="170"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="242"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="176" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="242"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-8C-bBu">
-                                                    <rect key="frame" x="13" y="125.5" width="143" height="20.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyq-TE-2g1">
+                                                    <rect key="frame" x="10" y="6" width="161" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-8C-bBu">
+                                                    <rect key="frame" x="10" y="195" width="161" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fyq-TE-2g1">
-                                                    <rect key="frame" x="42" y="30" width="96" height="87"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="87" id="ueS-Ce-SUi"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="ohx-8C-bBu" secondAttribute="trailing" constant="12" id="DTE-2H-WDW"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="Fyq-TE-2g1" secondAttribute="trailing" constant="30" id="GeF-5h-CuB"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="ohx-8C-bBu" secondAttribute="bottom" constant="16" id="Oub-gV-jXA"/>
-                                            <constraint firstItem="Fyq-TE-2g1" firstAttribute="top" secondItem="T9S-VK-eM7" secondAttribute="topMargin" constant="2" id="Yhe-hK-cAK"/>
-                                            <constraint firstItem="ohx-8C-bBu" firstAttribute="leading" secondItem="T9S-VK-eM7" secondAttribute="leadingMargin" constant="5" id="mk7-Ik-Y1W"/>
-                                            <constraint firstItem="Fyq-TE-2g1" firstAttribute="leading" secondItem="T9S-VK-eM7" secondAttribute="leadingMargin" constant="34" id="tAu-tR-c6a"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="movieImage" destination="Fyq-TE-2g1" id="4wd-pG-ks8"/>
                                             <outlet property="titleLabel" destination="ohx-8C-bBu" id="nAB-Li-JDm"/>
@@ -136,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T7-RG-Ynz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1353" y="525"/>
+            <point key="canvasLocation" x="-1354.4000000000001" y="524.8875562218891"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="20Z-Js-9Lj">
@@ -227,14 +218,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rY-Jl-SHc">
-                                <rect key="frame" x="88" y="161" width="226" height="99"/>
+                                <rect key="frame" x="16" y="161" width="343" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="59"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You got X / X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-Zg-o67">
-                                <rect key="frame" x="151" y="300" width="100" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You got X / X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-Zg-o67">
+                                <rect key="frame" x="74" y="300" width="226" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

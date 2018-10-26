@@ -8,37 +8,48 @@
 
 import UIKit
 
-class DataFileManager: NSObject {
+class DataFileManager {
     
-    var documentoDiretorio : URL?
+    static let fileManager = FileManager.default
     
-    func criarDiretorio() {
-        //diretorio da pasta documents
-        if let caminho = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            //append um novo path com a pasta a ser criada
-            documentoDiretorio = caminho.appendingPathComponent("Fotos Studio Ghibli")
+    static func loadImageFromPath(_ path: String) -> UIImage? {
+        
+        if let dir = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            let imagePath = URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(path).path
+            return UIImage(contentsOfFile: imagePath)
             
-            //verifico se a pasta existe, se não existir, ela é criada
-            let saida = FileManager.default.fileExists(atPath: documentoDiretorio!.path)
+        }
+        return nil
+        
+    }
+    static func saving(image: UIImage, withName: String) -> String {
+        
+        let directory = "Images"
+        var filePath = ""
+        if let documentDirectory = try fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let documentoDiretorio = documentDirectory.appendingPathComponent(directory)
+            
+            let saida = fileManager.fileExists(atPath: documentoDiretorio.path)
             if !saida {
                 do {
-                    try FileManager.default.createDirectory(atPath: documentoDiretorio!.path, withIntermediateDirectories: true, attributes: nil)
+                    try fileManager.createDirectory(atPath: documentoDiretorio.path, withIntermediateDirectories: true, attributes: nil)
                 } catch {
                     print(error)
                 }
             }
         }
-    }
-    
-    func getFotoSalva(named: String) -> UIImage? {
-        //localiza o diretorio da pasta documents
-        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
-            //pega a url da imagem que está na pasta Fotos e a retorna
-            let fileURL = URL(fileURLWithPath: dir.absoluteString).appendingPathComponent("/Fotos").appendingPathComponent(named).path
-            print(fileURL)
-            return UIImage(contentsOfFile:fileURL)
+        if let data = image.jpegData(compressionQuality: 1){
+            if let path = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL{
+                do {
+                    filePath = "/\(directory)/\(withName).jpeg"
+                    try data.write(to: path.appendingPathComponent(filePath)!)
+                    print("Succes in Save Photo!")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
         }
-        return nil
+        return filePath
     }
     
 
