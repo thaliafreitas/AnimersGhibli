@@ -12,13 +12,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     
     let store = DataStore.sharedInstance
+//    var likes: [String]
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         
         DataStore().savePeople { (p) in
             self.store.peopleDTO = p

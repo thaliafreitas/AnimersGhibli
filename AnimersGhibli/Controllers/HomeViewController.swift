@@ -34,6 +34,33 @@ class HomeViewController: UIViewController {
        
     }
     
+    lazy var previewActions: [UIPreviewActionItem] = {
+        func previewActionForTitle(_ title: String, style: UIPreviewActionStyle = .default) -> UIPreviewAction {
+            return UIPreviewAction(title: title, style: style) { previewAction, viewController in
+                print("Action: \(title)")
+            }
+        }
+        
+        // Action com o estilo padrão.
+        let actionLigar = previewActionForTitle("Ligar para contato")
+        
+        // Action com o estilo "destructive".
+        let action2 = previewActionForTitle("Ação Destrutiva", style: .destructive)
+        
+        // Actions agrupadas.
+        let subAction1 = previewActionForTitle("Sub Action 1")
+        let subAction2 = previewActionForTitle("Sub Action 2")
+        let groupedActions = UIPreviewActionGroup(title: "Sub Actions…", style: .default, actions: [subAction1, subAction2])
+        
+        return [actionLigar, action2, groupedActions]
+    }()
+    
+    // Adiciona as actions a lista de previewAcitions para as mesmas serem exibidas no swipe.
+    // Sobrescreve uma propriedade padrão da classe UIViewController.
+    override var previewActionItems: [UIPreviewActionItem] {
+        return previewActions
+    }
+    
 }
 
 
@@ -76,3 +103,4 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
 }
+
