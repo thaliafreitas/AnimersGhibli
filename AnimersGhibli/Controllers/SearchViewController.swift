@@ -22,7 +22,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        self.tableView.register(UINib(nibName: "CharacteristicsPeopleViewController", bundle: nil), forCellReuseIdentifier: "detailsCell")
         
         DataStore().savePeople { (p) in
             self.store.peopleDTO = p

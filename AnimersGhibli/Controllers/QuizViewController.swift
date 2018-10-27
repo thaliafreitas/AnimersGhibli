@@ -8,7 +8,9 @@
 
 import UIKit
 
-class QuizViewController: UIViewController {
+class QuizViewController: UIViewController, BackButtonDelegate {
+    
+    
 
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var answer1: UIButton!
@@ -21,6 +23,7 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(CoreDataManager.sharedInstance.movies.count)
         questions = [
             Question(
@@ -116,7 +119,9 @@ class QuizViewController: UIViewController {
     }
     
     // Set the background as a blue gradient
-    
+    func backToFirstQuizView() {
+        
+    }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -124,6 +129,7 @@ class QuizViewController: UIViewController {
             let vc = segue.destination as! ScoreViewController
             vc.noCorrect = noCorrect
             vc.total = questions.count
+            
         }
     }
     

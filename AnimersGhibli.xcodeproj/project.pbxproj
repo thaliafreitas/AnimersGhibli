@@ -28,6 +28,7 @@
 		5765591F21792F750021D545 /* PeopleDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765591E21792F750021D545 /* PeopleDataTransferObject.swift */; };
 		577EAA35217F6A110041CF56 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA34217F6A110041CF56 /* ScoreViewController.swift */; };
 		577EAA37217F6CA20041CF56 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA36217F6CA20041CF56 /* CoreDataManager.swift */; };
+		577EAA3F2184FCCD0041CF56 /* BackButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EAA3E2184FCCD0041CF56 /* BackButtonDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5765591E21792F750021D545 /* PeopleDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataTransferObject.swift; sourceTree = "<group>"; };
 		577EAA34217F6A110041CF56 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		577EAA36217F6CA20041CF56 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		577EAA3E2184FCCD0041CF56 /* BackButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				576558EB217616A20021D545 /* Main.storyboard */,
 				57655922217E0A0A0021D545 /* Delegate */,
 				576558FE21762A470021D545 /* DataFileManager.swift */,
+				577EAA3E2184FCCD0041CF56 /* BackButtonDelegate.swift */,
 				5765590B21776CA40021D545 /* Model */,
 				57655906217758640021D545 /* Controllers */,
 				576558F1217616A30021D545 /* Assets.xcassets */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577EAA3F2184FCCD0041CF56 /* BackButtonDelegate.swift in Sources */,
 				576558FD21761D6F0021D545 /* APIManager.swift in Sources */,
 				57655903217758130021D545 /* SearchViewController.swift in Sources */,
 				57655915217918500021D545 /* LocationDataTransferObject.swift in Sources */,

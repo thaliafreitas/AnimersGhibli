@@ -9,12 +9,15 @@
 import UIKit
 
 class ScoreViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var scoreLbl: UILabel!
     @IBOutlet weak var resultsLbl: UILabel!
 
     var noCorrect = 0
     var total = 0
+    var delegate: BackButtonDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,13 @@ class ScoreViewController: UIViewController {
         }
         scoreLbl.text = title
     }
-
+    
+    
+    
+    @IBAction func BackButton(_ sender: Any) {
+        delegate?.backToFirstQuizView()
+    }
+    
 }
     
 
