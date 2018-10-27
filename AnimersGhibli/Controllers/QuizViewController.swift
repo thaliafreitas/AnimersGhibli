@@ -120,7 +120,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     // Set the background as a blue gradient
     func backToFirstQuizView() {
-        
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
@@ -129,7 +129,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
             let vc = segue.destination as! ScoreViewController
             vc.noCorrect = noCorrect
             vc.total = questions.count
-            
+            vc.delegate = self
         }
     }
     
