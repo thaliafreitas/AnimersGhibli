@@ -45,6 +45,7 @@ class ScoreViewController: UIViewController {
     
     @IBAction func BackButton(_ sender: Any) {
         delegate?.backToFirstQuizView()
+        self.dismiss(animated: true)
     }
     
 }

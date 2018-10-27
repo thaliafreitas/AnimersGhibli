@@ -41,9 +41,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
         ]
         
         currentQuestion = questions[0]
-        
-        
-        resultLbl.text = "asodaosdoaosd"
+    
         setQuestion()
         
     
@@ -120,7 +118,9 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     // Set the background as a blue gradient
     func backToFirstQuizView() {
-        _ = navigationController?.popToRootViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
+         currentQuestion = questions[0]
+        setQuestion()
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
