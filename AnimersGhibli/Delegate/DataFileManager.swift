@@ -22,6 +22,27 @@ class DataFileManager {
         return nil
         
     }
+    
+    static func getDirectoryPath() -> NSURL {
+        let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("yourProjectImages")
+        let url = NSURL(string: path)
+        return url!
+    }
+    
+    
+//    static func getImageFromDocumentDirectory() {
+//        for i in 0..< {
+//            let imagePath = (self.getDirectoryPath() as NSURL).appendingPathComponent("picked\(i).jpg")
+//            let urlString: String = imagePath!.absoluteString
+//            if fileManager.fileExists(atPath: urlString) {
+//                let image = UIImage(contentsOfFile: urlString)
+//                imageArray.append(image!)
+//            } else {
+//                 print("No Image")/
+//            }
+//        }
+//    }
+    
     static func saving(image: UIImage, withName: String) -> String {
         
         let directory = "Images"
@@ -50,6 +71,14 @@ class DataFileManager {
             }
         }
         return filePath
+    }
+    
+    static func configureDirectory() -> String {
+        let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("yourProject")
+        if !fileManager.fileExists(atPath: path) {
+            try! fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+        }
+        return path
     }
     
 
