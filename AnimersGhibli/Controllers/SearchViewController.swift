@@ -12,7 +12,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     
     let store = DataStore.sharedInstance
-//    var likes: [String]
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -22,13 +23,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.register(UINib(nibName: "CharacteristicsPeopleViewController", bundle: nil), forCellReuseIdentifier: "detailsCell")
         
-//        if traitCollection.forceTouchCapability == .available {
-//            registerForPreviewing(with: self as! UIViewControllerPreviewingDelegate, sourceView: self.tableView)
-//        } else {
-//            UIAlertController = UIAlertController(title: "3D Touch Not Available", message: "Unsupported device.", preferredStyle: .alert)
-//        }
         
         DataStore().savePeople { (p) in
             self.store.peopleDTO = p
@@ -43,22 +38,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        if traitCollection.forceTouchCapability == .available {
-//            let defaults = UserDefaults.standard
-//
-//            if let row = defaults.object(forKey: "Character") as? Int {
-//                let character = character[row]
-//
-//                let shortcutItem = UIApplicationShortcutItem(
-//                    type: "Character",
-//                    localizedTitle: "\(character.nome)",
-//                    localizedSubtitle: "\(character.specie)",
-//                    icon: UIApplicationShortcutIcon.init(type: .contact),
-//                    userInfo: nil)
-//
-//                UIApplication.shared.shortcutItems = [shortcutItem]
-//    }
+    
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

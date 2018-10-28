@@ -8,7 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIViewControllerPreviewingDelegate {
+   
+    
     
     
     let store = DataStore.sharedInstance
@@ -17,6 +19,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if( traitCollection.forceTouchCapability == .available){
+            
+            registerForPreviewing(with: self, sourceView: view)
+            
+        }
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -59,6 +67,35 @@ class HomeViewController: UIViewController {
     // Sobrescreve uma propriedade padrão da classe UIViewController.
     override var previewActionItems: [UIPreviewActionItem] {
         return previewActions
+    }
+    
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath = collectionView?.indexPathForItem(at: location) else { return nil }
+        
+        guard let cell = collectionView?.cellForItem(at: indexPath) else { return nil }
+        
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailsViewController") as? DetailsViewController else { return nil }
+        let movie = store.filmesDTO[indexPath.row]
+        
+        
+        let image = UIImage(named: movie.title)
+        detailVC.imageDetails = image
+        let movieTitle = movie.title
+        detailVC.movieTitlee = movieTitle
+        let mDescription = movie.movieDescription
+        detailVC.movieDescriptionn = mDescription
+        
+        detailVC.preferredContentSize = CGSize(width: 0.0, height: 300)
+        
+        previewingContext.sourceRect = cell.frame
+        
+        return detailVC
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
     }
     
 }

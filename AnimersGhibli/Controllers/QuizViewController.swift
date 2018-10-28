@@ -116,7 +116,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
         resultLbl.text = "\(currentQuestionPos + 1) / \(questions.count)"
     }
     
-    // Set the background as a blue gradient
+    
     func backToFirstQuizView() {
         _ = navigationController?.popViewController(animated: true)
          currentQuestion = questions[0]
