@@ -11,7 +11,8 @@ import UIKit
 class ScoreViewController: UIViewController {
     
     
-
+    @IBOutlet weak var scrollScore: UIScrollView!
+    
     @IBOutlet weak var scoreLbl: UILabel!
     @IBOutlet weak var resultsLbl: UILabel!
 
@@ -21,6 +22,7 @@ class ScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Set the results
         resultsLbl.text = "You got \(noCorrect) out of \(total) correct"
@@ -39,6 +41,7 @@ class ScoreViewController: UIViewController {
             title = "Good Job"
         }
         scoreLbl.text = title
+        scrollScore.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
     }
     
     

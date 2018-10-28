@@ -10,6 +10,7 @@ import UIKit
 
 class CharacteristicsPeopleViewController: UIViewController {
 
+    @IBOutlet weak var scrollTableDetail: UIScrollView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var gender: UILabel!
@@ -28,6 +29,7 @@ class CharacteristicsPeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         name.text = nameCharacter!
         age.text = ageCharacter!
         gender.text = genderCharacter!
@@ -35,7 +37,7 @@ class CharacteristicsPeopleViewController: UIViewController {
         hair.text = hairCharacter!
 //        film.text = filmCharacter
         specie.text = specieCharacter
-       
+        scrollTableDetail.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
     }
 
 

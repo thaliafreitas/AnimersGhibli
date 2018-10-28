@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    
+    @IBOutlet weak var scrollCollectionDetail: UIScrollView!
     @IBOutlet weak var imageDetail: UIImageView!
     
     @IBOutlet weak var movieTitle: UILabel!
@@ -28,10 +30,12 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         imageDetail.image = imageDetails
         movieTitle.text = movieTitlee
         movieDescription.text = movieDescriptionn
 //        location.text = movieLocation
+        scrollCollectionDetail.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
        
     
             

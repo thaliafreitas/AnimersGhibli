@@ -12,6 +12,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     
 
+    @IBOutlet weak var scrollQuiz: UIScrollView!
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
@@ -23,7 +24,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        scrollQuiz.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+150)
         print(CoreDataManager.sharedInstance.movies.count)
         questions = [
             Question(
