@@ -42,11 +42,8 @@ class QuizViewController: UIViewController, BackButtonDelegate {
         ]
         
         currentQuestion = questions[0]
-    
         setQuestion()
-        
-    
-        
+        setButtonDesigner()
     }
     
     
@@ -60,9 +57,6 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     
     var questions: [Question] = []
-    
-   
-    
     var currentQuestion: Question?
     var currentQuestionPos = 0
     
@@ -72,22 +66,41 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     @IBAction func submitAnswer1(_ sender: Any) {
         checkAnswer(idx: 0)
+        if currentQuestion!.correctAnswer == 0{
+            answer1.backgroundColor = .green
+        }
     }
     @IBAction func submitAnswer2(_ sender: Any) {
         checkAnswer(idx: 1)
+        if currentQuestion!.correctAnswer == 1{
+            answer1.backgroundColor = .green
+        }
     }
     @IBAction func submitAnswer3(_ sender: Any) {
         checkAnswer(idx: 2)
+        if currentQuestion!.correctAnswer == 2{
+            answer1.backgroundColor = .green
+        }
     }
     @IBAction func submitAnswer4(_ sender: Any) {
         checkAnswer(idx: 3)
+        if currentQuestion!.correctAnswer == 3{
+            answer1.backgroundColor = .green
+        }
     }
     
     
     func checkAnswer(idx: Int) {
+        let buttonDict: [UIButton] = [answer1, answer2, answer3, answer4]
         if(idx == currentQuestion!.correctAnswer) {
+            
             noCorrect += 1
+            
         }
+        answer1.backgroundColor = .clear
+        answer2.backgroundColor = .clear
+        answer3.backgroundColor = .clear
+        answer4.backgroundColor = .clear
         loadNextQuestion()
     }
     
@@ -103,6 +116,30 @@ class QuizViewController: UIViewController, BackButtonDelegate {
         }
         
         
+    }
+    
+    func setButtonDesigner() {
+        answer1.backgroundColor = .clear
+        answer2.backgroundColor = .clear
+        answer3.backgroundColor = .clear
+        answer4.backgroundColor = .clear
+        answer1.layer.cornerRadius = 5
+        answer1.layer.cornerRadius = 5
+        answer2.layer.cornerRadius = 5
+        answer3.layer.cornerRadius = 5
+        answer4.layer.cornerRadius = 5
+        answer1.layer.borderWidth = 1
+        answer2.layer.borderWidth = 1
+        answer3.layer.borderWidth = 1
+        answer4.layer.borderWidth = 1
+        
+    }
+    
+    
+    func  setBackfroundColor() {
+        let colorTop =  UIColor(red: 120/255, green: 150/255, blue: 232/255, alpha: 1)
+        
+        self.view.backgroundColor = colorTop
     }
     
     // Set labels and buttions for the current question
