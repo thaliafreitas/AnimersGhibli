@@ -39,35 +39,12 @@ class HomeViewController: UIViewController, UIViewControllerPreviewingDelegate {
             })
         }
         
+        
+        setBackfroundColor()
        
     }
-    
-    lazy var previewActions: [UIPreviewActionItem] = {
-        func previewActionForTitle(_ title: String, style: UIPreviewAction.Style = .default) -> UIPreviewAction {
-            return UIPreviewAction(title: title, style: style) { previewAction, viewController in
-                print("Action: \(title)")
-            }
-        }
-        
-        // Action com o estilo padrão.
-        let actionLigar = previewActionForTitle("Ligar para contato")
-        
-        // Action com o estilo "destructive".
-        let action2 = previewActionForTitle("Ação Destrutiva", style: .destructive)
-        
-        // Actions agrupadas.
-        let subAction1 = previewActionForTitle("Sub Action 1")
-        let subAction2 = previewActionForTitle("Sub Action 2")
-        let groupedActions = UIPreviewActionGroup(title: "Sub Actions…", style: .default, actions: [subAction1, subAction2])
-        
-        return [actionLigar, action2, groupedActions]
-    }()
-    
-    // Adiciona as actions a lista de previewAcitions para as mesmas serem exibidas no swipe.
-    // Sobrescreve uma propriedade padrão da classe UIViewController.
-    override var previewActionItems: [UIPreviewActionItem] {
-        return previewActions
-    }
+
+  
     
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -108,12 +85,17 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let colorTop =  UIColor(red: 197/255, green: 246/255, blue: 232/255, alpha: 1)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CustomCollectionViewCell
         
         let movie = store.filmesDTO[indexPath.row]
         
         
         cell.viewCollection(image: UIImage(named: movie.title), title: movie.title)
+        
+        
+        
+        collectionView.backgroundColor = colorTop
         
         return cell
         
@@ -134,7 +116,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             vc.movieTitlee = store.filmesDTO[currentRow].title
             vc.movieDescriptionn = store.filmesDTO[currentRow].movieDescription
             vc.imageDetails = UIImage(named: store.filmesDTO[currentRow].title)
+            vc.producer = store.filmesDTO[currentRow].producer
+            vc.releaseData = store.filmesDTO[currentRow].realeaseData
             }
+    }
+    
+    func  setBackfroundColor() {
+        let colorTop =  UIColor(red: 197/255, green: 246/255, blue: 232/255, alpha: 1)
+        
+        self.view.backgroundColor = colorTop
     }
 
     

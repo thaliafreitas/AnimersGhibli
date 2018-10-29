@@ -37,7 +37,14 @@ class CharacteristicsPeopleViewController: UIViewController {
         hair.text = hairCharacter!
 //        film.text = filmCharacter
         specie.text = specieCharacter
-        scrollTableDetail.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+100)
+        scrollTableDetail.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
+        setBackfroundColor()
+    }
+    
+    func  setBackfroundColor() {
+        let colorTop =  UIColor(red: 197/255, green: 246/255, blue: 232/255, alpha: 1)
+        
+        self.view.backgroundColor = colorTop
     }
 
 

@@ -24,7 +24,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollQuiz.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+150)
+        scrollQuiz.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
         print(CoreDataManager.sharedInstance.movies.count)
         questions = [
             Question(
@@ -44,6 +44,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
         currentQuestion = questions[0]
         setQuestion()
         setButtonDesigner()
+        setBackfroundColor()
     }
     
     
@@ -66,27 +67,19 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     @IBAction func submitAnswer1(_ sender: Any) {
         checkAnswer(idx: 0)
-        if currentQuestion!.correctAnswer == 0{
-            answer1.backgroundColor = .green
-        }
+       
     }
     @IBAction func submitAnswer2(_ sender: Any) {
         checkAnswer(idx: 1)
-        if currentQuestion!.correctAnswer == 1{
-            answer1.backgroundColor = .green
-        }
+       
     }
     @IBAction func submitAnswer3(_ sender: Any) {
         checkAnswer(idx: 2)
-        if currentQuestion!.correctAnswer == 2{
-            answer1.backgroundColor = .green
-        }
+       
     }
     @IBAction func submitAnswer4(_ sender: Any) {
         checkAnswer(idx: 3)
-        if currentQuestion!.correctAnswer == 3{
-            answer1.backgroundColor = .green
-        }
+        
     }
     
     
@@ -97,10 +90,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
             noCorrect += 1
             
         }
-        answer1.backgroundColor = .clear
-        answer2.backgroundColor = .clear
-        answer3.backgroundColor = .clear
-        answer4.backgroundColor = .clear
+        
         loadNextQuestion()
     }
     
@@ -137,7 +127,7 @@ class QuizViewController: UIViewController, BackButtonDelegate {
     
     
     func  setBackfroundColor() {
-        let colorTop =  UIColor(red: 120/255, green: 150/255, blue: 232/255, alpha: 1)
+        let colorTop =  UIColor(red: 197/255, green: 246/255, blue: 232/255, alpha: 1)
         
         self.view.backgroundColor = colorTop
     }

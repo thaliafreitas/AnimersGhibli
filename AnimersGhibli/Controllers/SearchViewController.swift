@@ -12,7 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     
     let store = DataStore.sharedInstance
-    
+    let colorTop =  UIColor(red: 197/255, green: 246/255, blue: 232/255, alpha: 1)
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +33,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             self.store.specieDTO = s!
             self.tableView.reloadData()
         }
+        setBackfroundColor()
         
         
         
@@ -48,11 +49,14 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = store.peopleDTO[indexPath.row].name
+        cell.backgroundColor = colorTop
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "detailsCell", sender: indexPath.row)
     }
     
@@ -73,6 +77,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Characters"
+    }
+    
+    func  setBackfroundColor() {
+        self.tableView.backgroundColor = colorTop
+        tableView.backgroundColor = colorTop
     }
     
 }

@@ -73,6 +73,7 @@ class DataFileManager {
         return filePath
     }
     
+    
     static func configureDirectory() -> String {
         let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("yourProject")
         if !fileManager.fileExists(atPath: path) {
