@@ -118,5 +118,19 @@ class CoreDataManager {
             fatalError("Failed to fetch character: \(error)")
         }
     }
+    func executeThe(query: NSPredicate, forEntityName entity: String ) -> [NSManagedObject]{
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        request.predicate = query
+        do {
+            let result = try context.fetch(request)
+            return result as! [NSManagedObject]
+            
+        } catch {
+            print("Failed query")
+        }
+        return []
+        
+}
 
 }
