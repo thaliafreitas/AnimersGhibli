@@ -141,8 +141,6 @@ class APIManager {
         }
         
         dataTask.resume()
-    }
-    
-    
+    } 
     
 }
